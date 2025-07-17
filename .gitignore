@@ -1,0 +1,34 @@
+# Virtual environment
+venv/
+env/
+
+# Python build artifacts
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# Docker
+Dockerfile
+*.tar
+
+# Database files
+*.db
+
+# IDE/project files
+.vscode/
+*.sln
+*.sln.docstates
+
+# OS generated files
+.DS_Store
+Thumbs.db
+
+# Logs and temp files
+*.log
+*.tmp
+
+# Ignore Python compiled files
+*.egg-info/
+dist/
+build/
