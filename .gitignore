@@ -32,3 +32,6 @@ Thumbs.db
 *.egg-info/
 dist/
 build/
+
+# Ignore Pytest cache
+.Pytest_cache/
