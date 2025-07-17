@@ -24,7 +24,8 @@ Setup (Local)
   2. Create and activate a virtual environment:
       python -m venv venv
       source venv/bin/activate  # On Linux/Mac
-      # Or on Windows: venv\Scripts\activate
+
+      Or on Windows: venv\Scripts\activate
 
   4. Install dependencies:
        pip install -r requirements.txt
