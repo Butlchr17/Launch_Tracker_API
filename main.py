@@ -28,8 +28,15 @@ class LaunchCreate(BaseModel):
 class LaunchResponse(LaunchCreate):
     id: int
 
+@app.get("/")
+def root():
+    return {"message": "Welcome to Launch Tracker API. Visit /docs for API documentation."}
+
+
 @app.post("/launches/", response_model=LaunchResponse)
 def create_launch(launch: LaunchCreate):
+    if launch.status not in ["Scheduled", "Launched", "Failed"]:
+        raise HTTPException(status_code=400, detail="Invalid status. Must be 'Scheduled', 'Launched', or 'Failed'.")
     session = Session()
     db_launch = Launch(vehicle=launch.vehicle, date=launch.date, status=launch.status)
     session.add(db_launch)
