@@ -28,7 +28,7 @@ class LaunchCreate(BaseModel):
 class LaunchResponse(LaunchCreate):
     id: int
 
-@app.post("/launches/", reponse_model=LaunchResponse)
+@app.post("/launches/", response_model=LaunchResponse)
 def create_launch(launch: LaunchCreate):
     session = Session()
     db_launch = Launch(vehicle=launch.vehicle, date=launch.date, status=launch.status)
