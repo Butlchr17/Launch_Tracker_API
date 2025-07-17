@@ -9,11 +9,17 @@ Features
   Docker deployment for easy containerization.
     
 Technologies
+
   Backend: FastAPI (Python 3.12)
+  
   Database: SQLAlchemy ORM with SQLite
+  
   Validation: Pydantic
+  
   Testing: pytest
+  
   Containerization: Docker
+  
   Version Control: Git/GitHub
     
 Setup (Local)
